@@ -1,0 +1,29 @@
+/*AQUI VOY A CAMBIAR TODOS LOS ATRIBUTOS QUE ESTÁN DENTRO DE LA CAJA POKEMON*/
+.nombre-pokemon {
+    font-family: "Flexo-Demi",arial,sans-serif;
+    color: #313131;
+    text-transform: none;
+    font-size: 145%;
+    margin-bottom: 5px;
+}
+
+.imagen {
+    width: 160px;
+    height: 100px;
+    object-fit: scale-down;
+    margin:auto;
+    display: flex; 
+    flex-direction: column;
+}
+
+.id-pokemon {
+    display: flex;
+    margin-left: 60px;
+    font-size: small; 
+    color: #ADB5BD;
+}
+
+.tipo-pokemon {
+    display: flex;
+
+}

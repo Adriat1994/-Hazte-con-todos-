@@ -1,0 +1,300 @@
+@charset "UTF-8";
+/*AQUI VA TODO EL DISEÑO DE TODO EL HTML, ES EL CONJUNTO DE TODOS LOS DIVS, AQUI MODIFICO COMO QUIERO QUE SE COMPORTE EL CONJUNTO DE DIVS*/
+.todo {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/*AQUI VA TODO EL DISEÑO DE LA CAJA DE LOS POKEMONS, EL DISEÑO DE CADA CAJA INDIVIDUAL*/
+.caja-pokemon {
+  background-color: aquamarine;
+  width: 300px;
+  margin: 10px;
+  display: block;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+/*AQUI VOY A CAMBIAR TODOS LOS ATRIBUTOS QUE ESTÁN DENTRO DE LA CAJA POKEMON*/
+.nombre-pokemon {
+  font-family: "Flexo-Demi",arial,sans-serif;
+  color: #313131;
+  text-transform: none;
+  font-size: 145%;
+  margin-bottom: 5px;
+}
+
+.imagen {
+  width: 160px;
+  height: 100px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.id-pokemon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 60px;
+  font-size: small;
+  color: #ADB5BD;
+}
+
+.tipo-pokemon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tipo-grass {
+  background-color: #9bcc50;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-fire {
+  background-color: #fd7d24;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-water {
+  background-color: #4592c4;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-bug {
+  background-color: #729f3f;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-normal {
+  background-color: #a4acaf;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-poison {
+  background-color: #b97fc9;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-electric {
+  background-color: #eed535;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-ground {
+  background-color: #9c6644;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-fairy {
+  background-color: #fcd5ce;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-fighting {
+  background-color: #d56723;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-psychic {
+  background-color: #f366b9;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-rock {
+  background-color: #a38c21;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-ghost {
+  background-color: #7b62a3;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-icy {
+  background-color: #51c4e7;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-dragon {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #53a4cf), color-stop(50%, #f16e57));
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background-color: #53a4cf;
+  color: #fff;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.tipo-flying {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #3dc7ef), color-stop(50%, #bdb9b8));
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background-color: #3dc7ef;
+  color: #212121;
+  color: #fff;
+  font-family: "Flexo-Medium",arial,sans-serif;
+  border-radius: 3px;
+  line-height: 18px;
+  max-width: 110px;
+  margin: 0 1.5625% 0 0;
+  width: 38.4375%;
+  float: left;
+  text-transform: none;
+  font-size: 11px;
+  text-align: center;
+}
+/*# sourceMappingURL=styles.css.map */

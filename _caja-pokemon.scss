@@ -1,0 +1,9 @@
+/*AQUI VA TODO EL DISEÑO DE LA CAJA DE LOS POKEMONS, EL DISEÑO DE CADA CAJA INDIVIDUAL*/
+.caja-pokemon {
+    background-color:aquamarine;
+    width: 300px;
+    margin: 10px;
+    display: block;
+    flex-direction: row;
+    position: relative;
+}

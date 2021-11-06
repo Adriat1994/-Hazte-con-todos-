@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
@@ -39,14 +39,65 @@
                 
 
                 miHtml.innerHTML += '<div class="caja-pokemon caja-pokemon-'+pokemon.id+'"> </div>';
-                document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h3> hola  ' + pokemon.name + ' </h3>';
+                document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h3 class ="nombre-pokemon"> ' + pokemon.name + ' </h3>';
                 document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<img class="imagen" src="' + pokemon.sprites.front_default + '"  alt=" ' + pokemon.name + '">';
-                document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<img class="imagen" src="' + pokemon.sprites.back_default + '"  alt=" ' + pokemon.name + '"> ';
+                document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "id-pokemon"> Nº ' + pokemon.id + ' </h5>';
+                
 
-                //miHtml.innerHTML += pokemon.id;
-                //miHtml.innerHTML += '</div>'
+                for (tipos of pokemon.types) {          //Con este bucle lo que vamos a hacer es extraer el tipo de pokemon de cada uno
+                                                        //Además, vamos a agregar una clase para cada tipo de pokemon, para luego diseñarlas en SASS
+                    if (tipos.type.name === "grass") {
+                    document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-grass"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "fire") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-fire"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "water") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-water"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "bug") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-bug"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "normal") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-normal"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "poison") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-poison"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "electric") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-electric"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "ground") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-ground"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "fairy") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-fairy"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "fighting") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-fighting"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "psychic") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-psychic"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "rock") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-rock"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "ghost") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-ghost"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "icy") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-icy"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "dragon") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-dragon"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "flying") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class = "tipo-flying"> ' + tipos.type.name + ' </h5>';
+                    }
+                }
+
             }
-            //miHtml.innerHTML += '<div class= "caja-pokemon" <h1> hola  ' + pokemon.name + ' </h1> <img class="imagen" src="' + pokemon.sprites.front_default + '"  alt=" ' + pokemon.name + '"> <img class="imagen" src="' + pokemon.sprites.back_default + '"  alt=" ' + pokemon.name + '"> </div>';
+           
             console.log(almacenDePokemon);
 
         }
