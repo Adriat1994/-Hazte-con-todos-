@@ -5,25 +5,40 @@
     text-transform: none;
     font-size: 145%;
     margin-bottom: 5px;
+    margin-left: 0px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .imagen {
-    width: 160px;
+    width: 300px;
     height: 100px;
     object-fit: scale-down;
     margin:auto;
     display: flex; 
     flex-direction: column;
+    animation: sport 6s linear 0s infinite normal;
+    
 }
+
+.imagen:hover {
+    animation-play-state: paused;
+}
+
+@keyframes sport {
+    from {transform: rotateX(-10deg) rotateY(0deg);
+    }
+    to {transform: rotateX(-10deg) rotateY(360deg);
+    }
+}
+
 
 .id-pokemon {
     display: flex;
     margin-left: 60px;
+    margin-top: 0ch;
+    margin-bottom: 0px;
     font-size: small; 
     color: #ADB5BD;
 }
 
-.tipo-pokemon {
-    display: flex;
-
-}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="body-mew">
+    
+
+    <div class="todo-mew"></div>
+
+    <script>
+
+        var miHTMLMew = document.querySelector('.todo-mew');
+
+        async function pedirDatosMew() {
+            var laPeticionMew
+             = await fetch ('https://pokeapi.co/api/v2/pokemon/mew');
+            var dataMew = await laPeticionMew.json();
+
+            console.log(dataMew.stats);
+
+            miHTMLMew.innerHTML += '<div class="caja-mew caja-mew-'+dataMew.id+'"> </div>';
+                document.querySelector('.caja-mew-'+dataMew.id).innerHTML += '<h3 class="nombre-mew"> ' + dataMew.name + ' </h3>';
+                document.querySelector('.caja-mew-'+dataMew.id).innerHTML += '<h5 class="id-mew"> Nº ' + dataMew.id + ' </h5>';
+
+           for (stats of dataMew.stats) {
+               console.log(stats.stat.name + " " + stats.base_stat)
+
+               document.querySelector('.caja-mew-'+dataMew.id).innerHTML += '<h6 class = "stat-mew"> ' + stats.stat.name + " " + stats.base_stat + ' </h6>';
+           }
+
+        }
+
+        pedirDatosMew();
+        
+        
+
+
+
+    </script>
+
+    <img src="https://tribugamer.com/wp-content/uploads/2021/04/Mew-riendo.jpg" alt="mew" class = "imagen-mew">
+
+</body>
+</html>

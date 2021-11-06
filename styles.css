@@ -13,12 +13,88 @@
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: #495057;
+}
+
+.imagen-movimiento {
+  width: 250px;
+  height: 157px;
+  position: absolute;
+  left: 100px;
+  bottom: 100px;
+  -webkit-animation: move 10s linear 0s infinite normal;
+          animation: move 10s linear 0s infinite normal;
+  border-style: none;
+}
+
+@-webkit-keyframes move {
+  0% {
+    left: 100px;
+    bottom: 100px;
+    opacity: 1;
+  }
+  20% {
+    left: 300px;
+    bottom: 300px;
+    opacity: 0;
+  }
+  40% {
+    left: 500px;
+    bottom: 500px;
+    opacity: 1;
+  }
+  60% {
+    left: 800px;
+    bottom: 300px;
+    opacity: 0;
+  }
+  80% {
+    left: 1200px;
+    bottom: 100px;
+    opacity: 1;
+  }
+  100% {
+    left: 800px;
+    bottom: -200px;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 100px;
+    bottom: 100px;
+    opacity: 1;
+  }
+  20% {
+    left: 300px;
+    bottom: 300px;
+    opacity: 0;
+  }
+  40% {
+    left: 500px;
+    bottom: 500px;
+    opacity: 1;
+  }
+  60% {
+    left: 800px;
+    bottom: 300px;
+    opacity: 0;
+  }
+  80% {
+    left: 1200px;
+    bottom: 100px;
+    opacity: 1;
+  }
+  100% {
+    left: 800px;
+    bottom: -200px;
+  }
 }
 
 /*AQUI VA TODO EL DISEÑO DE LA CAJA DE LOS POKEMONS, EL DISEÑO DE CADA CAJA INDIVIDUAL*/
 .caja-pokemon {
-  background-color: aquamarine;
   width: 300px;
+  height: 220px;
   margin: 10px;
   display: block;
   -webkit-box-orient: horizontal;
@@ -26,6 +102,13 @@
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+  background-color: #dee2ff;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 15px 15px #ec731e;
+          box-shadow: 0px 0px 15px 15px #ec731e;
 }
 
 /*AQUI VOY A CAMBIAR TODOS LOS ATRIBUTOS QUE ESTÁN DENTRO DE LA CAJA POKEMON*/
@@ -35,10 +118,13 @@
   text-transform: none;
   font-size: 145%;
   margin-bottom: 5px;
+  margin-left: 0px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .imagen {
-  width: 160px;
+  width: 300px;
   height: 100px;
   -o-object-fit: scale-down;
      object-fit: scale-down;
@@ -50,6 +136,35 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation: sport 6s linear 0s infinite normal;
+          animation: sport 6s linear 0s infinite normal;
+}
+
+.imagen:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes sport {
+  from {
+    -webkit-transform: rotateX(-10deg) rotateY(0deg);
+            transform: rotateX(-10deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(-10deg) rotateY(360deg);
+            transform: rotateX(-10deg) rotateY(360deg);
+  }
+}
+
+@keyframes sport {
+  from {
+    -webkit-transform: rotateX(-10deg) rotateY(0deg);
+            transform: rotateX(-10deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(-10deg) rotateY(360deg);
+            transform: rotateX(-10deg) rotateY(360deg);
+  }
 }
 
 .id-pokemon {
@@ -57,14 +172,10 @@
   display: -ms-flexbox;
   display: flex;
   margin-left: 60px;
+  margin-top: 0ch;
+  margin-bottom: 0px;
   font-size: small;
   color: #ADB5BD;
-}
-
-.tipo-pokemon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .tipo-grass {
@@ -79,6 +190,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-fire {
@@ -93,6 +209,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-water {
@@ -107,6 +228,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-bug {
@@ -121,6 +247,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-normal {
@@ -135,6 +266,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-poison {
@@ -149,6 +285,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-electric {
@@ -163,6 +304,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-ground {
@@ -177,6 +323,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-fairy {
@@ -191,6 +342,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-fighting {
@@ -205,6 +361,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-psychic {
@@ -219,6 +380,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-rock {
@@ -233,6 +399,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-ghost {
@@ -247,6 +418,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-icy {
@@ -261,6 +437,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-dragon {
@@ -278,6 +459,11 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
 }
 
 .tipo-flying {
@@ -296,5 +482,60 @@
   text-transform: none;
   font-size: 11px;
   text-align: center;
+  margin-left: 30%;
+  margin-bottom: 3px;
+  border: 1px;
+  border-style: solid;
+  border-color: #495057;
+}
+
+.imagen-mew {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  bottom: 20px;
+  left: 45%;
+  margin-left: -100px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border: 5px solid skyblue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 400px;
+}
+
+.imagen-mew:hover {
+  -webkit-animation: sport 6s linear 0s infinite normal;
+          animation: sport 6s linear 0s infinite normal;
+}
+
+.body-mew {
+  background-image: url("./fondo-mew.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.caja-mew {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 800px;
+  height: 100px;
+  margin-left: 550px;
+  margin-top: 600px;
+  font-size: 150%;
+  text-shadow: 0px 0px 16px black;
+}
+
+.nombre-mew {
+  text-shadow: 0px 0px 16px black;
 }
 /*# sourceMappingURL=styles.css.map */

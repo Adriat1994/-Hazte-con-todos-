@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="boton-musica">
+        <audio src="./musica pokedex.mp3" controls loop="loop"></audio>
+    </div>
+
+
+
+    <div class="todo"></div>
+
+    <script>
+
+        var miHtml = document.querySelector('.todo');
+
+        async function pedirDatos() {                   //Con esta petición pedimos los datos de los 151 primeros pokemons, los originales
+            var laPetición
+                = await fetch('https://pokeapi.co/api/v2/pokemon?limit=150');
+            var data = await laPetición.json();         //Guardamos los datos en un .json y estos datos los guardamos en una variable
+            //console.log(data)
+
+            const almacenDePokemon = [];                //Declaramos una variable, un array vacio, donde vamos a guardar todos los datos individuales de cada pokemon, los datos de su URL individual
+
+            for (pokemon of data.results) {
+                //console.log(pokemon.name);
+                var laPeticiónIndividual
+                    = await fetch(pokemon.url);
+                var dataIndividual = await laPeticiónIndividual.json();
+                almacenDePokemon.push(dataIndividual);
+            }
+
+            for (pokemon of almacenDePokemon) {                 //Ahora que ya podemos acceder a todos los datos de cada pokemon, los vamos pintando con .innerHTML
+                
+                //console.log(pokemon.name);
+                //console.log(pokemon.id);
+                
+                
+
+                miHtml.innerHTML += '<div class="caja-pokemon caja-pokemon-'+pokemon.id+'"> </div>';
+                document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h3 class="nombre-pokemon"> ' + pokemon.name + ' </h3>';
+                document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<img class="imagen" src="' + pokemon.sprites.front_default + '"  alt=" ' + pokemon.name + '">';
+                document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="id-pokemon"> Nº ' + pokemon.id + ' </h5>';
+                
+
+                for (tipos of pokemon.types) {          //Con este bucle lo que vamos a hacer es extraer el tipo de pokemon de cada uno
+                                                        //Además, vamos a agregar una clase para cada tipo de pokemon, para luego diseñarlas en SASS
+                    if (tipos.type.name === "grass") {
+                    document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-grass"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "fire") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-fire"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "water") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-water"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "bug") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-bug"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "normal") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-normal"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "poison") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-poison"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "electric") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-electric"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "ground") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-ground"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "fairy") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-fairy"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "fighting") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-fighting"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "psychic") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-psychic"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "rock") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-rock"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "ghost") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-ghost"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "icy") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-icy"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "dragon") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-dragon"> ' + tipos.type.name + ' </h5>';
+                    }
+                    else if (tipos.type.name === "flying") {
+                        document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="tipo-flying"> ' + tipos.type.name + ' </h5>';
+                    }
+                }
+
+            }
+           
+            console.log(almacenDePokemon);
+
+        }
+       pedirDatos();
+
+
+       //Botón que da musica
+
+        let boton = document.querySelector(".reproductor")
+        let audioEtiqueta = document.querySelector("audio")
+
+        boton.addEventListener("click", () => {
+        audioEtiqueta.setAttribute("src", "./musica pokedex.mp3")
+        audioEtiqueta.play()
+        console.log(`Reproduciendo: ${audioEtiqueta.src}`)
+        })
+
+
+    </script>
+
+    <a href="./MEW.html">
+        <img src="https://cdn.custom-cursor.com/packs/63/pack2282.png" alt="pokeball" class="imagen-movimiento">
+    </a>
+    
+</body>
+
+</html>
