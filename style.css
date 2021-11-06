@@ -1,0 +1,31 @@
+/*AQUI VA TODO EL DISEÑO DE LA CAJA DE LOS POKEMONS EN CONJUNTO*/
+.caja-pokemon {
+    background-color: greenyellow;
+    width: 400px;
+    margin: 10px;
+}
+
+/*AQUI VA TODO EL DISEÑO DE LAS IMAGENES DE LOS POKEMONS*/
+.imagen {
+    width: 160px;
+    height: 100px;
+    object-fit: scale-down;
+    margin:auto;
+    display: flex; 
+    flex-direction: column;
+    ;
+}
+
+/*AQUI VA TODO EL DISEÑO DE TODO EL HTML*/
+.todo{
+    width: 90vw;
+    display: flex; 
+    flex-direction: column;
+    
+}
+
+/*AQUI VA TODO EL DISEÑO DEL BODY*/
+body {
+    width: 70%;
+    ;
+}
