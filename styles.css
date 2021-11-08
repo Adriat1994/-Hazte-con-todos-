@@ -91,9 +91,13 @@
   }
 }
 
+body {
+  background-color: #495057;
+}
+
 /*AQUI VA TODO EL DISEÑO DE LA CAJA DE LOS POKEMONS, EL DISEÑO DE CADA CAJA INDIVIDUAL*/
 .caja-pokemon {
-  width: 300px;
+  width: 350px;
   height: 220px;
   margin: 10px;
   display: block;
@@ -176,6 +180,8 @@
   margin-bottom: 0px;
   font-size: small;
   color: #ADB5BD;
+  width: 30px;
+  height: 10px;
 }
 
 .tipo-grass {
