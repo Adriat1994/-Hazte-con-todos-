@@ -23,7 +23,7 @@
 
         function IrAPokemon(id) {
             console.log(id);
-            //location.href = "http://127.0.0.1:5500/CadaPokemon.html";
+            location.href = "http://127.0.0.1:5500/Cada_pokemon.html?id="+id;
         }
 
 
@@ -60,6 +60,8 @@
                 document.querySelector('.caja-pokemon-'+pokemon.id).innerHTML += '<h5 class="id-pokemon"> Nº ' + pokemon.id + ' </h5>';
                
                
+                //TODO: Buscar un switch para hacer todo esto
+
                 
                 
 
@@ -129,7 +131,7 @@
 
     </script>
 
-    <a href="./MEW.html">
+    <a href="./MEW.html" class="imagen-movimiento">
         <img src="https://cdn.custom-cursor.com/packs/63/pack2282.png" alt="pokeball" class="imagen-movimiento">
     </a>
     

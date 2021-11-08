@@ -1,6 +1,7 @@
 /*AQUI VA TODO EL DISEÑO DE TODO EL HTML, ES EL CONJUNTO DE TODOS LOS DIVS, AQUI MODIFICO COMO QUIERO QUE SE COMPORTE EL CONJUNTO DE DIVS*/
 .todo{
     width: 90vw;
+    margin: 0 auto;
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,6 +18,7 @@
     bottom: 100px;
     animation: move 10s linear 0s infinite normal;
     border-style: none;
+    
 }
 
 @keyframes move {
@@ -53,4 +55,6 @@
 
 body {
     background-color: #495057;  
+    overflow-x: hidden;
+
 }

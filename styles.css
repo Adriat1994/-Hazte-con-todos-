@@ -2,6 +2,7 @@
 /*AQUI VA TODO EL DISEÑO DE TODO EL HTML, ES EL CONJUNTO DE TODOS LOS DIVS, AQUI MODIFICO COMO QUIERO QUE SE COMPORTE EL CONJUNTO DE DIVS*/
 .todo {
   width: 90vw;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,6 +94,7 @@
 
 body {
   background-color: #495057;
+  overflow-x: hidden;
 }
 
 /*AQUI VA TODO EL DISEÑO DE LA CAJA DE LOS POKEMONS, EL DISEÑO DE CADA CAJA INDIVIDUAL*/
@@ -542,6 +544,56 @@ body {
 }
 
 .nombre-mew {
+  text-shadow: 0px 0px 16px black;
+}
+
+.imagen-cada-pokemon {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  bottom: 20px;
+  left: 45%;
+  margin-left: -100px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border: 5px solid skyblue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 400px;
+}
+
+.imagen-cada-pokemon:hover {
+  -webkit-animation: sport 6s linear 0s infinite normal;
+          animation: sport 6s linear 0s infinite normal;
+}
+
+.body-cada-pokemon {
+  background-image: url("./fondo-mew.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.caja-cada-pokemon {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 800px;
+  height: 100px;
+  margin-left: 550px;
+  margin-top: 600px;
+  font-size: 150%;
+  text-shadow: 0px 0px 16px black;
+}
+
+.nombre-cada-pokemon {
   text-shadow: 0px 0px 16px black;
 }
 /*# sourceMappingURL=styles.css.map */

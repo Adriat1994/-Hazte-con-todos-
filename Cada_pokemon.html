@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="body-cada-pokemon">
+    
+
+    <div class="todo-cada-pokemon"></div>
+
+    
+
+    <script>
+
+
+        var url_string = window.location.href; 
+        var url = new URL(url_string);
+        var id = url.searchParams.get("id");
+        //console.log(id);
+
+
+        var miHTMLCadaPokemon = document.querySelector('.todo-cada-pokemon');
+
+        async function pedirDatosCadaPokemon() {
+            var laPeticionCadaPokemon
+             = await fetch ('https://pokeapi.co/api/v2/pokemon/'+id);
+            var dataCadaPokemon = await laPeticionCadaPokemon.json();
+
+            console.log(dataCadaPokemon.stats);
+
+            miHTMLCadaPokemon.innerHTML += '<div class="caja-cada-pokemon caja-cada-pokemon-'+dataCadaPokemon.id+'"> </div>';
+                document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<h3 class="nombre-mew"> ' + dataCadaPokemon.name + ' </h3>';
+                document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<h5 class="id-mew"> Nº ' + dataCadaPokemon.id + ' </h5>';
+
+           for (stats of dataCadaPokemon.stats) {
+               console.log(stats.stat.name + " " + stats.base_stat)
+
+               document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<h6 class="stat-cada-pokemon"> ' + stats.stat.name + " " + stats.base_stat + ' </h6>';
+           }
+
+           document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<img class="imagen-cada-pokemon" src="' + dataCadaPokemon.sprites.front_default + '"  alt=" ' + dataCadaPokemon.name + '">';
+
+           let colorVeneno = "rgba(203,96,179,1)";
+           let colorPlanta = "rgba(14,166,0,1)";
+
+
+
+           document.querySelector('.imagen-cada-pokemon').style.background = `linear-gradient(to right, ${colorVeneno} 0%, ${colorPlanta} 100%)`;
+
+
+
+
+
+
+        }
+
+        pedirDatosCadaPokemon();
+        
+
+
+        
+
+
+
+    </script>
+
+   
+</body>
+</html>
