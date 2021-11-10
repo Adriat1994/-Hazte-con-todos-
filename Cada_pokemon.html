@@ -16,7 +16,7 @@
 
     <script>
 
-
+        //Esto nos permite que dependiendo del id del pokemon, se muestren los datos de cada uno al hacer click sobre ellos en la pokedex
         var url_string = window.location.href; 
         var url = new URL(url_string);
         var id = url.searchParams.get("id");
@@ -30,26 +30,27 @@
              = await fetch ('https://pokeapi.co/api/v2/pokemon/'+id);
             var dataCadaPokemon = await laPeticionCadaPokemon.json();
 
-            console.log(dataCadaPokemon.stats);
+            //console.log(dataCadaPokemon.stats);
 
             miHTMLCadaPokemon.innerHTML += '<div class="caja-cada-pokemon caja-cada-pokemon-'+dataCadaPokemon.id+'"> </div>';
                 document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<h3 class="nombre-mew"> ' + dataCadaPokemon.name + ' </h3>';
                 document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<h5 class="id-mew"> Nº ' + dataCadaPokemon.id + ' </h5>';
 
            for (stats of dataCadaPokemon.stats) {
-               console.log(stats.stat.name + " " + stats.base_stat)
+               //console.log(stats.stat.name + " " + stats.base_stat)
 
                document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<h6 class="stat-cada-pokemon"> ' + stats.stat.name + " " + stats.base_stat + ' </h6>';
            }
 
            document.querySelector('.caja-cada-pokemon-'+dataCadaPokemon.id).innerHTML += '<img class="imagen-cada-pokemon" src="' + dataCadaPokemon.sprites.front_default + '"  alt=" ' + dataCadaPokemon.name + '">';
 
-           let colorVeneno = "rgba(203,96,179,1)";
-           let colorPlanta = "rgba(14,166,0,1)";
+          
+           console.log(dataCadaPokemon.types);
 
 
-
-           document.querySelector('.imagen-cada-pokemon').style.background = `linear-gradient(to right, ${colorVeneno} 0%, ${colorPlanta} 100%)`;
+          //Variables de colores en función del tipo de pokemon
+          
+           
 
 
 

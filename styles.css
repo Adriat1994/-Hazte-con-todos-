@@ -563,11 +563,10 @@ body {
   margin-bottom: 400px;
 }
 
-.imagen-cada-pokemon:hover {
-  -webkit-animation: sport 6s linear 0s infinite normal;
-          animation: sport 6s linear 0s infinite normal;
-}
-
+/*.imagen-cada-pokemon:hover {
+    //animation-play-state: paused;
+    animation: sport 6s linear 0s infinite normal;
+}*/
 .body-cada-pokemon {
   background-image: url("./fondo-mew.jpg");
   background-repeat: no-repeat;
