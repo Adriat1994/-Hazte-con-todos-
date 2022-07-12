@@ -7,7 +7,7 @@ Una vez recogidos los datos, se mostraron todos de golpe modificando el DOM.
 La idea del proyecto fue familizarizarse con el DOM, SCSS y HTML a un nivel basico e inicial.
 
   ## URL para ver el resultado
-Para ver proyecto en directo puedes verlo aquí ()
+Para ver proyecto en directo puedes verlo aquí (https://adriat1994.github.io/-Hazte-con-todos-/)
 
 
   ## Autor ✒️
